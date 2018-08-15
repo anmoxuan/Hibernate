@@ -8,7 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+/**
+ * 蛤蟆皮
+ */
 public class StudentServlet extends SuperServlet {
     private StudentDao studentDao=new StudentDao();
     protected  void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
