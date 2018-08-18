@@ -4,12 +4,15 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="com.entity">
-    <class name="com.entity.Student" table="Student">
+    <class name="com.entity.Student" table="Student" dynamic-update="true">
         <id name="sid" column="sid">
             <generator class="native"></generator>
         </id>
         <property name="sname" />
         <property name="age"/>
+        <many-to-one name="clazz" class="com.entity.Clazz">
+            <column name="cid"></column>
+        </many-to-one>
     </class>
 
 </hibernate-mapping>
